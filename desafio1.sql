@@ -55,14 +55,14 @@ CREATE TABLE SpotifyClone.`history`(
   FOREIGN KEY(user_id) REFERENCES `users`(user_id)
 ) engine = InnoDB;
 
-INSERT INTO plans (`type`, price)
+INSERT INTO SpotifyClone.plans (`type`, price)
 VALUES
   ("gratuito", 0),
   ("universitario", 5.99),
   ("pessoal", 6.99),
   ("familiar", 7.99);
 
-INSERT INTO `users` (`name`, age, plan_id, member_since)
+INSERT INTO SpotifyClone.`users` (`name`, age, plan_id, member_since)
 VALUES
   ("Thati", 23, 1, '2019-10-20'),
   ("Cintia", 35, 4, '2017-12-30'),
@@ -75,7 +75,7 @@ VALUES
   ("Angelina", 42, 4, '2018-04-29'),
   ("Paul", 46, 4, '2017-01-17');
 
-INSERT INTO artists (`name`)
+INSERT INTO SpotifyClone.artists (`name`)
 VALUES
   ("Walter Phoenix"),
   ("Freedie Shannon"),
@@ -84,7 +84,7 @@ VALUES
   ("Tyler Isle"),
   ("Fog");
 
-INSERT INTO albums (`name`, release_year, artist_id)
+INSERT INTO SpotifyClone.albums (`name`, release_year, artist_id)
 VALUES
   ("Envious", 1990, 1),
   ("Exuberant", 1993, 1),
@@ -97,7 +97,7 @@ VALUES
   ("No guarantees", 2015, 5),
   ("Apparatus", 2015, 6);
 
-INSERT INTO `following` (user_id, artist_id)
+INSERT INTO SpotifyClone.`following` (user_id, artist_id)
 VALUES
   (1, 1),
   (1, 2),
@@ -122,7 +122,7 @@ VALUES
   (10, 4),
   (10, 6);  
 
-INSERT INTO tracks (`name`, album_id, duration_seconds)
+INSERT INTO SpotifyClone.tracks (`name`, album_id, duration_seconds)
 VALUES
 	("Soul For Us", 1, 200),
 	("Reflections Of Magic", 1, 163),
@@ -165,7 +165,7 @@ VALUES
 	("Baby", 10, 136),
 	("You Make Me Feel So..", 10, 83);
 
-INSERT INTO `history` (track_id, user_id, last_played)
+INSERT INTO SpotifyClone.`history` (track_id, user_id, last_played)
 VALUES
   (36, 1, '2020-02-28 10:45:55'),
   (25, 1, '2020-05-02 05:30:35'),
